@@ -1,0 +1,74 @@
+package addNumbers;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class AddNumbers {
+	
+	public static void Sum(int x, int y)
+	{
+		
+		System.out.println(x + y);
+	}
+
+	public static void Sum(String x, String y)
+	{
+		
+		System.out.println(x + y);
+	}
+	
+	public static void ReadFromConsole()
+	{
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Please enter your Alphabets");
+					
+		String str = s.nextLine();
+		String str1=s.nextLine();
+		
+		Sum( str , str1);
+		
+		System.out.println("Please enter your Numbers");
+		
+		int n = Integer.parseInt(s.nextLine());
+		int n1=Integer.parseInt(s.nextLine());
+		
+		Sum(n , n1);
+		
+		s.close();
+	}
+	
+	public static void main(String[] args) {
+		
+		try
+		{
+			
+			
+			
+			
+	File f = new File("C:/Users/rdhaka.ORADEV/Documents/Sum.txt");
+	f.createNewFile();
+	
+	FileWriter fw = new FileWriter(f);
+	fw.write(result);
+	fw.close();
+	
+	
+	FileReader fr = new FileReader(f);
+	char[] rd = new char[1000];
+	
+	fr.read(rd);
+	
+	System.out.println(rd);
+	
+	fr.close();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+		
+	}
+
+}

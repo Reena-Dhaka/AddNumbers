@@ -1,0 +1,34 @@
+package helloWorld;
+import java.util.Scanner;
+import java.io.*;
+
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		{
+		System.out.println("Enter data to process");
+		
+		Scanner in = new Scanner(System.in); 
+		
+        String s = in.nextLine(); 
+        if(s.isEmpty())
+        System.out.println("Please enter data");
+        {
+        String delim= "[ ]";
+        String[] data=s.split(delim);
+        System.out.println(data);
+        int number = Integer.parseInt( s );
+        System.out.println(number);
+        in.close();
+        }
+	}
+
+		catch(NumberFormatException n)
+		{
+			System.out.println("User not entered number");
+		}
+}
+}
